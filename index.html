@@ -16,7 +16,7 @@
     <h1>BlockVerse</h1>
   </div>
   <div class="header-item">
-    <a class="home-btn" href="#">Home</a>
+    <a class="home-btn" href="#">Wallet</a>
     <button id="product-btn" class="product-btn">Product</button>
     <button id="contact-btn">Contact Us</button>
   </div>
@@ -51,7 +51,35 @@
   <div class="product">
     <div id="product-modal" class="prodmodal">
       <span class="close1">&times;</span>
-      <h3>Sorry we haven't started yet</h3>
+      <div class="products1">
+      <div class="liq">
+      <h2>Liquid Network</h2>
+       <p> Bitcoin layer-2 for digital asset issuance.</p>
+      </div>
+        <div class="amp">
+        <h2>Blockstream AMP</h2>
+        <p>An API to issue and manage digital assets on the Liquid Network.</p>
+      </div>
+        <div class="core">
+        <h2> Lightning</h2>
+        <p>Our own implementation of the Lightning protocol.</p>
+      </div>
+      </div>
+      <div class="products2">
+        <div class="feed">
+       <h2> Cryptocurrency Data Feed</h2>
+        <p>Real-time and historical cryptocurrency trade data.</p>
+      </div>
+        <div class="satellite">
+        <h2>Blockstream Satellite</h2>
+        <p>The Bitcoin blockchain, delivered from space.</p>
+      </div>
+        <div class="elements">
+        <h2>Elements</h2>
+        <p>An open-source, sidechain-capable blockchain platform.</p>
+      </div>
+
+    </div>
     </div>
   </div>
   <div id="signup-modal" class="modal2">
@@ -289,7 +317,7 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script>
-  var modal = document.getElementById("contact-modal");
+var modal = document.getElementById("contact-modal");
 var btn = document.getElementById("contact-btn");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
