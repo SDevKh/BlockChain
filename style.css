@@ -850,7 +850,6 @@
     margin-top: 20vh;
     width: 15vw;
     height: 30vh;
-    background: linear-gradient(135deg, transparent); 
     border-radius: 50%;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), inset 0 -15px 25px rgba(255, 255, 255, 0.5);
     animation: float 5s ease-in-out infinite;
@@ -882,14 +881,14 @@
   display: none;
   position: fixed;
   z-index: 1;
-  left: 23vw;
-  top: 14vh;
-  width: 60%;
-  height: 35%;
+  left: 15%;
+  top: 10vh;
+  width: 75%;
+  height: auto;
   overflow: auto;
-  background-image: linear-gradient(#008091,black);
+  background-image: linear-gradient(#000000, black);
   padding-top: 60px;
-  border-radius: 5vw;
+  border-radius: 3vw;
   justify-items: center;
   font-size: 3vw;
   font-family: Fredoka;
@@ -1112,4 +1111,85 @@ input:valid ~ label{
 }
 .register p a:hover{
     text-decoration: underline;
+}
+.products1{
+  display: flex;
+  font-size: 1vw;
+  margin: 2vw;
+}
+.products2{
+  display: flex;
+  font-size: 1vw;
+  margin: 4vw;
+}
+.liq{
+  margin-left: 1vw;
+  width: 12vw;
+  border: blueviolet 1px solid;
+  padding: 2vw;
+}
+.liq:hover {
+  transform: scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+}
+.amp{
+  margin-left: 6vw;
+  width: 13vw;
+  border: blueviolet 1px solid;
+  padding: 2vw;
+}
+.amp:hover {
+  transform: scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+}
+.core{
+  margin-left: 7vw;
+  width: 12vw;
+  border: blueviolet 1px solid;
+  padding: 2vw;
+}
+.core:hover {
+  transform: scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+}
+.liq p, .amp p, .core p{
+  margin-top: 1vw;
+  font-family: cinzel;
+}
+.liq h2, .amp h2, .core h2{
+  font-family: Fredoka;
+}
+.satellite, .elements {
+  margin-left: 7vw;
+  width: 12vw;
+  border: blueviolet 1px solid;
+  padding: 2vw;
+}
+.satellite:hover {
+  transform: scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+}
+.elements:hover {
+  transform: scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+}
+.feed{
+  width: 12vw;
+  border: blueviolet 1px solid;
+  padding: 2vw;
+}
+.feed:hover {
+  transform: scale(1.1); 
+  transition: transform 0.5s ease-in-out;
+}
+.satellite p, .elements p{
+  margin-top: 1vw;
+  font-family: Cinzel;
+}
+.feed p{
+  margin-top: 1vw;
+  font-family: Cinzel;
+}
+.feed h2, .satellite h2, .elements h2{
+  font-family: Fredoka;
 }
