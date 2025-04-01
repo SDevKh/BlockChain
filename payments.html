@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockVerse Payments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="header2">
+        <div class="logo">
+          <h1>Blockverse</h1>
+        </div>
+        <div class="header-item">
+        </div>
+      </nav>
+    <section class="payment-section">
+        <h1 style="text-align: center; margin-top: 3vh;">Payment Options</h1>
+        <div class="payment-methods">
+            <div class="method">
+                <img src="images/paypal.png" alt="PayPal">
+                <p>Pay with PayPal</p>
+                <button class="paynow">Pay Now</button>
+            </div>
+            <div class="method">
+                <img src="images/paytm.png" alt="Stripe">
+                <p>Pay with UPI</p>
+                <button class="paynow">Pay Now</button>
+            </div>
+            <div class="method">
+                <img src="images/card.png" alt="Credit Card">
+                <p>Pay with Credit/Debit Card</p>
+                <button class="paynow">Pay Now</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer2">
+        <p>&copy; 2025 BlockVerse. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    var homeButtons = document.querySelectorAll(".paynow");
+
+    homeButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            alert("Sorry, But you are Poor!! Earn some money first.");
+        });
+    });
+</script>
+</html>
