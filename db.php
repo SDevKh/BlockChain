@@ -1,5 +1,5 @@
 <?php
-$host = '127.0.0.1';
+$host = 'blockchain.onrender.com';
 $db = 'blockchain';
 $user = 'root';
 $pass = '';
