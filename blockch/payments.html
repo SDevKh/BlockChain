@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockVerse Payments</title>
+    <link rel="stylesheet" href="payments.css?v=1.1">
+</head>
+<body>
+    <nav class="header2">
+        <div class="logo">
+            <h1>Blockverse</h1>
+        </div>
+        <div class="header-item"></div>
+    </nav>
+
+    <section class="payment-section">
+        <h1 style="text-align: center; margin-top: 3vh;">Payment Options</h1>
+        
+        <div class="payment-methods">
+            <h3 style="place-self: anchor-center;">Enter Your Details</h3>
+            <form action="payment.php" method="POST">
+                <input type="text" name="name" placeholder="Name" required><br><br>
+                <input type="email" name="email" placeholder="Email" required><br><br>
+                <input type="text" name="phone" placeholder="Phone" required><br><br>
+                <input style="border: none;" type="number" name="amount" id="payment-amount" placeholder="Amount" min="1" step="0.01" required readonly hidden><br><br>
+                <p class="amount-display" style="text-align: center; font-weight: bold; margin: 10px 0;"></p>
+                <button type="submit">Pay Now</button>
+            </form>
+
+            <div class="method">
+                <img src="images/paypal.png" alt="PayPal">
+                <p>Pay with PayPal</p>
+            </div>
+            <div class="method">
+                <img src="images/paytm.png" alt="Stripe">
+                <p>Pay with UPI</p>
+            </div>
+            <div class="method">
+                <img src="images/card.png" alt="Credit Card">
+                <p>Pay with Credit/Debit Card</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer2">
+        <p>&copy; 2025 BlockVerse. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const amountParam = urlParams.get('amount');
+        const amountInput = document.getElementById('payment-amount');
+
+        // If amount is provided via URL, update the input field and display
+        if (amountParam) {
+            amountInput.value = amountParam;
+            document.querySelector('.amount-display').textContent = `Amount: ₹${amountParam}`;
+        } else {
+            amountInput.readOnly = false;
+            amountInput.placeholder = "Enter Amount";
+        }
+
+        // Payment button logic for PayPal, UPI, Card
+        document.querySelectorAll(".paynow").forEach(button => {
+            button.addEventListener("click", function () {
+                const amount = amountInput.value;
+                if (!amount || amount <= 0) {
+                    alert("Please enter a valid amount");
+                    return;
+                }
+
+                const method = this.parentElement.querySelector('p').textContent
+                    .replace('Pay with ', '').toLowerCase();
+
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = 'payment.php';
+
+                const methodInput = document.createElement('input');
+                methodInput.type = 'hidden';
+                methodInput.name = 'method';
+                methodInput.value = method;
+
+                const amountInputHidden = document.createElement('input');
+                amountInputHidden.type = 'hidden';
+                amountInputHidden.name = 'amount';
+                amountInputHidden.value = amount;
+
+                form.appendChild(methodInput);
+                form.appendChild(amountInputHidden);
+                document.body.appendChild(form);
+                form.submit();
+            });
+        });
+    </script>
+</body>
+</html>

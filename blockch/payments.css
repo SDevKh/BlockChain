@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+.header2 {
+    background-image: linear-gradient(45deg, #22004a, #b84fa0);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Payment Section */
+.payment-section {
+    max-width: 900px;
+    margin: 5vh auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Form Styling */
+.payment-methods form {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.payment-methods input {
+    padding: 0.8rem 1rem;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.payment-methods button[type="submit"] {
+    background-color: #1e88e5;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-methods button[type="submit"]:hover {
+    background-color: #1565c0;
+}
+
+/* Payment Methods */
+.method {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: #fafafa;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.method:hover {
+    transform: translateY(-4px);
+    background-color: #f0f0f0;
+}
+
+.method img {
+    width: 50px;
+    height: auto;
+}
+
+.method p {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Pay Now Buttons in Payment Methods */
+.method button.paynow {
+    padding: 0.5rem 1.2rem;
+    background-color: #00bfa5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.method button.paynow:hover {
+    background-color: #008e76;
+}
+
+/* Footer */
+.footer2 {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e2f;
+    color: white;
+    margin-top: 5vh;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .method {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .payment-methods input {
+        width: 95%;
+    }
+}
